@@ -9,6 +9,10 @@ html, body {
   height: 100%;
 }
 
+.door-status{
+  font-size: 70px;
+}
+
 /* === Flash Messages === */
 .flash {
   margin: 10px auto;
@@ -61,7 +65,7 @@ h1 {
 .door-panel:hover,
 .forms:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 30px rgba(0, 255, 100, 0.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 /* === Door Status === */

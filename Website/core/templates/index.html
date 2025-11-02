@@ -6,18 +6,18 @@
 <div class="door-panel">  
   <h1> HOME </h1>
   
-  {% set front_door_color = 'green' if front_door_status == 'Unlocked' else 'red' %}
+  {% set front_door_color = '#00FF00' if front_door_status == 'Unlocked' else '#FF0000' %}
   <p>Front Door: <span id="Front Door" style="color: {{ front_door_color }};">{{ front_door_status }}</span></p>
 
-  {% set master_bedroom_door_color = 'green' if master_bedroom_door_status == 'Unlocked' else 'red' %}
+  {% set master_bedroom_door_color = '#00FF00' if master_bedroom_door_status == 'Unlocked' else '#FF0000' %}
   <p>Master Bedroom Door: <span id="Master Bedroom Door" style="color: {{ master_bedroom_door_color }};">{{ master_bedroom_door_status }}</span></p>
   
   
-  {% set patio_door_color = 'green' if patio_door_status == 'Unlocked' else 'red' %}
+  {% set patio_door_color = '#00FF00' if patio_door_status == 'Unlocked' else '#FF0000' %}
   <p>Patio Door: <span id="Patio Door" style="color: {{ patio_door_color }};">{{ patio_door_status }}</span></p>
   
 
-  {% set kitchen_door_color = 'green' if kitchen_door_status == 'Unlocked' else 'red' %}
+  {% set kitchen_door_color = '#00FF00' if kitchen_door_status == 'Unlocked' else '#FF0000' %}
   <p>Kitchen Door: <span id="Kitchen Door" style="color: {{ kitchen_door_color }};">{{ kitchen_door_status }}</span></p>
 </div>
 
@@ -34,7 +34,7 @@
     const doorElement = document.getElementById(data.doorname);
     if (doorElement) {
       doorElement.textContent = data.status.charAt(0).toUpperCase() + data.status.slice(1);
-      doorElement.style.color = data.status === 'Unlocked' ? 'green' : 'red';
+      doorElement.style.color = data.status === 'Unlocked' ? '#00FF00' : '#FF0000';
     }
   });
 </script>
