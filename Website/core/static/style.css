@@ -1,0 +1,275 @@
+
+/* === Global Styles === */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0A0A0A;
+  color: #F5F5F5;
+  font-family: "Fira Mono", Consolas, monospace;
+  height: 100%;
+}
+
+/* === Flash Messages === */
+.flash {
+  margin: 10px auto;
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: Geneva, Verdana, sans-serif;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 60%;
+  transition: all 0.3s ease-in-out;
+}
+
+.flash.error {
+  background-color: rgba(255, 0, 0, 0.15);
+  color: #FF4C4C;
+  border: 2px solid #FF4C4C;
+}
+
+.flash.success {
+  background-color: rgba(0, 128, 0, 0.15);
+  color: #2ECC71;
+  border: 2px solid #2ECC71;
+}
+
+/* === Headings === */
+h1 {
+  font-size: 72px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  color: #F5F5F5;
+  -webkit-text-stroke: 3px #000;
+  paint-order: stroke fill;
+  margin: 20px 0;
+}
+
+/* === Panels === */
+.door-panel,
+.forms {
+  background-color: #1C1917;
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.door-panel:hover,
+.forms:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(0, 255, 100, 0.2);
+}
+
+/* === Door Status === */
+.door-panel p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.door-panel span {
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* === Form Container === */
+.forms {
+  background-color: #1C1917;
+  color: #F5F5F5;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px auto;
+  width: 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  font-family: "Fira Mono", Consolas, monospace;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.forms:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(0, 255, 100, 0.15);
+}
+
+/* === Form Heading === */
+.forms h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #00FF9C;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+/* === Labels === */
+.forms label {
+  display: block;
+  font-size: 1.2rem;
+  color: #CCCCCC;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* === Input Fields === */
+.forms input[type="text"],
+.forms input[type="password"],
+.forms input[type="email"],
+.forms input[type="number"],
+.forms select,
+.forms textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #0D0D0D;
+  border: 2px solid #2E2E2E;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #E0E0E0;
+  transition: all 0.3s ease;
+}
+
+.forms input:focus,
+.forms select:focus,
+.forms textarea:focus {
+  outline: none;
+  border-color: #00FF9C;
+  box-shadow: 0 0 10px rgba(0, 255, 156, 0.3);
+}
+
+/* === Buttons === */
+.forms button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00FF9C, #00B8FF);
+  color: #0A0A0A;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.forms button:hover {
+  background: linear-gradient(90deg, #00B8FF, #00FF9C);
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 255, 156, 0.4);
+}
+
+
+/* === WTForms Submit Button === */
+form .submit-btn,
+form input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00FF9C, #00B8FF);
+  color: #0A0A0A;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 255, 156, 0.3);
+}
+
+form .submit-btn:hover,
+form input[type="submit"]:hover {
+  background: linear-gradient(90deg, #00B8FF, #00FF9C);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 255, 156, 0.5);
+}
+
+form .submit-btn:active,
+form input[type="submit"]:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 8px rgba(0, 255, 156, 0.4);
+}
+
+
+/* === Container for Logout Button === */
+.logout-container {
+  width: 100%;
+  text-align: center;  
+  margin-top: 20px;
+}
+
+/* === Styled Logout Button === */
+.logout-btn {
+  display: inline-block;    
+  width: 200px;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #FF4C4C, #FF0000);
+  color: #0A0A0A;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.5);
+  transition: all 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(90deg, #FF0000, #FF4C4C);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 76, 76, 0.7);
+}
+
+.logout-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 8px rgba(255, 76, 76, 0.6);
+}
+
+
+/* === Small Text or Links === */
+.forms .form-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #B0B0B0;
+}
+
+.forms .form-footer a {
+  color: #00FF9C;
+  text-decoration: none;
+}
+
+.forms .form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .door-panel,
+  .forms {
+    width: 85%;
+    font-size: 28px;
+  }
+
+  .flash {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .forms {
+      width: 85%;
+      padding: 25px;
+    }
+
+    .forms h2 {
+      font-size: 32px;
+    }
+
+    .forms button {
+      font-size: 1rem;
+    }
+}

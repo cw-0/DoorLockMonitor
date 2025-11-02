@@ -1,0 +1,7 @@
+IoT/main
+Website/__pycache__/
+Website/.env
+Website/venv/
+Website/instance/
+Website/migrations/
+Website/Core/__pycache__/
