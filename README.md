@@ -63,8 +63,6 @@ This project consists of two main components:
 - `doorname`: Door identifier (e.g., "Front Door")
 - `status`: Current status ("Locked" or "Unlocked")
 
-## API Endpoints
-
 ### Web Routes
 - `GET /` - Dashboard (requires authentication)
 - `GET /login` - Login page
@@ -84,7 +82,7 @@ This project consists of two main components:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/cw-0/DoorLockMonitor 
    cd "DoorLockMonitor"
    ```
 
